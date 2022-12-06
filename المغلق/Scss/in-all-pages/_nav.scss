@@ -1,0 +1,25 @@
+// Start Nav
+.navbar {
+  background-image: var(--navBackgroundInLightMode);
+  .navbar-brand,
+  .nav-link {
+    color: var(--whiteColor);
+    font-family: var(--fontCairo);
+
+    &:hover,
+    &:focus {
+      color: var(--colorTheme) !important;
+    }
+  }
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+    
+    svg {
+      color: var(--whiteColor);
+      font-size: 30px;
+    }
+  }
+}
+// End Nav
