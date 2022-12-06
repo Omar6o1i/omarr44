@@ -1,0 +1,172 @@
+
+// My FrameWork
+@use '../../helpers/frameWork' as *;
+// Variables In All Pages
+@use '../../helpers/variables' as *;
+// Navbar In All Pages
+@use '../../in-all-pages/nav' as *;
+// Setting In All Pages 
+@use '../../in-all-pages/setting' as *;
+// Shapes triangle In All Pages 
+@use '../../in-all-pages/shapes-triangle' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--lightModeBackground);   
+} 
+
+// Start Layer
+.close {
+  position: absolute;
+  top: -65px;
+  right: 0px;
+  font-size: 35px;
+  color: var(--colorTheme);
+  transition: var(--secondTransition);
+  &:hover {
+    color: red;
+  }
+
+  > svg {
+    box-shadow: 3px 3px 6px 0px #000;
+    border-radius: 50%;
+  }
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.822);
+  z-index: 200;
+  
+  .text {
+    box-shadow: 3px 3px 6px 0px #000;
+    cursor: default;
+    min-width: 300px;
+    font-family: var(--fontCairo);
+    background-color: var(--whiteColor);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 10px;
+    > {
+      .start {
+        color: var(--colorTheme);
+        margin-bottom: 10px;
+      }
+      .talking {
+        line-height: 1.8;
+        color: var(--darkColor);
+      }
+    }
+  }
+}
+// End Layer
+
+// Start Counter
+.parent {
+  direction: ltr;
+  width: 300px;
+  height: 300px;
+  background-color: #111;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 3px #000;
+  border-radius: 75px;
+  border-bottom-left-radius: 120px 230px;
+  border-bottom-right-radius: 120px 230px;
+  border: 5px solid var(--colorTheme);
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  .zkr {
+    display: none;
+    font-family: var(--fontCairo);
+    min-width: 250px;
+    background: var(--colorTheme);
+    color: #fff;
+    position: absolute;
+    top: -26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--secondTransition);
+    border-radius: 15px;
+    padding: 13px 17px;
+    box-shadow: 3px 3px 6px 0px #000;
+    
+    > {
+      .close {
+        font-size: 22px;
+        top: -40px;
+        right: 10px;
+      }
+    }
+  }
+
+  .screen {
+    width: 225px;
+    height: 45px;
+    margin: 30px auto;
+    background: #eee;
+    border-radius: 10px;
+    font-family: digital;
+    > span {
+      color: var(--colorTheme);
+      font-family: 'Big Shoulders Stencil Display', cursive;
+      margin-right: 15px;
+      margin-top: 3px;
+      font-size: 37px;
+    }
+  }
+  .reset, 
+  .dark,
+  .count {
+    width: 40px;
+    height: 40px;
+    background: var(--colorTheme);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 9px 0px #111111db, inset 0px 0px 3px 0px #11111161, 0px 0px 1px 0px #f44336;
+    transition: var(--secondTransition);
+    &:active {
+      background-color: rgba(119, 119, 119, 0.082);
+    }
+
+    &::before {
+      position: absolute;
+      text-transform: uppercase;
+      color: var(--darkCount);
+      font-size: 10px;
+      top: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .reset {
+    margin-left: 30px;
+    &::before {
+      content: "Reset";
+    }
+  }
+
+  .dark {
+    margin-right: 30px;
+    &::before {
+      content: "Random";
+    }
+  }
+  
+  .count {
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    &::before {
+      content: "Count";
+    }
+  }
+}
+// End Counter
