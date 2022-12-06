@@ -1,0 +1,42 @@
+
+// Variables
+:root {
+  // Main Color Of Theme
+  --colorTheme: red;
+
+  // Colors
+    // White Color
+    --whiteColor: #fff;
+    --darkColor: #333;
+    --darkCount: #9e9e9e5e;
+    --quranDarkColor: #1f2125;
+    --quranLightColor: #fcfcfc;
+
+  // Fonts
+    // Cairo Font
+    --fontCairo: 'Cairo', sans-serif;
+    // Open Sans
+    --fontOpenSans:'Open Sans', sans-serif;
+
+  // Body Backgrounds
+    // Theme Light Background
+    --lightModeBackground: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
+    // Theme Dark Background
+    --darkModeBackground: linear-gradient(to right, #000000, #434343);
+
+  // Nav Background
+    // Theme Light Mode Background
+    --navBackgroundInLightMode: linear-gradient(to right, #333, #111, #333);
+    // Theme Dark Mode Background
+    --navBackgroundInDarkMode: linear-gradient(to right, #74ebd5, #acb6e5);
+
+  // Setting Background
+    // Theme Light Mode
+    --settingLightMode: linear-gradient(to right, #fcfcfc, #ffffff);
+    // Theme Dark Mode
+    --settingDarkMode: linear-gradient(to right, #232526, #414345);
+
+    // Transition
+    --mainTransition: .5s;
+    --secondTransition: .3s;
+}

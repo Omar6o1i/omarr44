@@ -1,0 +1,33 @@
+// Shadow Dark
+.shadow-black {
+  box-shadow: 0px 0px 7px #0000007d;
+}
+
+//not-selector
+.not-select {
+  user-select: none;
+}
+
+// Style Of Ul
+.style-list {
+  list-style: none;
+}
+
+// Setting Child flex
+.child-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// Hidden The OverFlow 
+.hidden {
+  overflow: hidden;
+}
+
+// Background Size Cover 
+.background-cover {
+  background-size: cover;
+}
